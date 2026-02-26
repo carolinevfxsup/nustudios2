@@ -1,14 +1,10 @@
 import { Header } from '@/components/Header';
-import { Hero } from '@/components/Hero';
-import { Services } from '@/components/Services';
-import { SocialProof } from '@/components/SocialProof';
-import { ValueProps } from '@/components/ValueProps';
-import { Offer } from '@/components/Offer';
-import { Pricing } from '@/components/Pricing';
-import { HowItWorks } from '@/components/HowItWorks';
-import { ICP } from '@/components/ICP';
-import { Founder } from '@/components/Founder';
-import { FAQ } from '@/components/FAQ';
+import { HeroNew } from '@/components/HeroNew';
+import { AddOnServices } from '@/components/AddOnServices';
+import { CreativeFlywheel } from '@/components/CreativeFlywheel';
+import { BrandVault } from '@/components/BrandVault';
+import { CaseStudyGrid } from '@/components/CaseStudyGrid';
+import { ComparisonTable } from '@/components/ComparisonTable';
 import { CTABanner } from '@/components/CTABanner';
 import { ContactForm } from '@/components/ContactForm';
 import { Footer } from '@/components/Footer';
@@ -18,19 +14,12 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <Header />
       <main>
-        <Hero />
-        <Services />
-        <Offer />
-        <SocialProof />
-        <ValueProps />
-        <Pricing />
-        <HowItWorks />
-        {/* Hide ICP on desktop, show on mobile/tablet with updated icon styles */}
-        <div className="md:hidden">
-          <ICP />
-        </div>
-        <Founder />
-        <FAQ />
+        <HeroNew />
+        <AddOnServices />
+        <CreativeFlywheel />
+        <BrandVault />
+        <CaseStudyGrid />
+        <ComparisonTable />
         <CTABanner />
         <ContactForm />
       </main>

@@ -5,8 +5,8 @@ const rows = [
   {
     capability: 'Production Speed',
     traditional: '2–4 Weeks',
-    pureAI: 'Instant',
-    hybrid: 'Instant On-Brand',
+    pureAI: 'Instant (Generic)',
+    hybrid: 'Instant (On-Brand)',
   },
   {
     capability: 'Quality',
@@ -19,6 +19,12 @@ const rows = [
     traditional: 'Manual',
     pureAI: 'None',
     hybrid: 'Fully Automated',
+  },
+  {
+    capability: 'SEO / Blogs',
+    traditional: 'Outsourced',
+    pureAI: 'Robotic',
+    hybrid: 'AI-Optimized, Human-Voiced',
   },
   {
     capability: 'Brand Consistency',
@@ -45,10 +51,13 @@ export function ComparisonTable() {
     <section className="py-24 bg-background">
       <div className="container mx-auto px-4 md:px-8 xl:px-[100px]">
         <div className="text-center mb-16">
+          <p className="text-xs font-mono uppercase tracking-[0.3em] text-primary mb-4">
+            The Moat
+          </p>
           <h2 className="text-3xl md:text-5xl font-display mb-4">
-            <span className="font-bold">Why Our</span>{' '}
+            <span className="font-bold">Superior</span>{' '}
             <span className="italic bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">
-              Hybrid Model Wins
+              Competitive Positioning
             </span>
           </h2>
         </div>
@@ -71,7 +80,7 @@ export function ComparisonTable() {
                 <th className="text-center p-4 text-sm font-mono uppercase tracking-wider text-muted-foreground border-b border-border">
                   Pure AI Tools
                 </th>
-                <th className="text-center p-4 text-sm font-mono uppercase tracking-wider text-primary border-b-2 border-primary bg-primary/5 rounded-t-xl font-bold">
+                <th className="text-center p-4 text-sm font-mono uppercase tracking-wider text-primary border-b-2 border-primary bg-primary/5 rounded-t-xl font-bold shadow-[0_0_20px_hsl(var(--primary)/0.15)]">
                   Our Hybrid Model ✦
                 </th>
               </tr>
@@ -90,7 +99,7 @@ export function ComparisonTable() {
                     <CellIcon type="bad" />
                     {row.pureAI}
                   </td>
-                  <td className="p-4 text-center text-sm font-semibold text-foreground bg-primary/5">
+                  <td className="p-4 text-center text-sm font-semibold text-foreground bg-primary/5 shadow-[inset_0_0_15px_hsl(var(--primary)/0.08)]">
                     <CellIcon type="good" />
                     {row.hybrid}
                   </td>

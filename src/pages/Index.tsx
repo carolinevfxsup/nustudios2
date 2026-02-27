@@ -1,12 +1,11 @@
 import { Header } from '@/components/Header';
 import { HeroNew } from '@/components/HeroNew';
-import { AddOnServices } from '@/components/AddOnServices';
-import { ComparisonTable } from '@/components/ComparisonTable';
-import { CaseStudyGrid } from '@/components/CaseStudyGrid';
-import { BrandVault } from '@/components/BrandVault';
-import { CTABanner } from '@/components/CTABanner';
-import { ContactForm } from '@/components/ContactForm';
-import { Footer } from '@/components/Footer';
+import { TheStruggle } from '@/components/TheStruggle';
+import { TheJourney } from '@/components/TheJourney';
+import { CreativeServices } from '@/components/CreativeServices';
+import { Showcase } from '@/components/Showcase';
+import { CompetitiveAdvantage } from '@/components/CompetitiveAdvantage';
+import { FooterCTA } from '@/components/FooterCTA';
 
 const Index = () => {
   return (
@@ -14,14 +13,13 @@ const Index = () => {
       <Header />
       <main>
         <HeroNew />
-        <AddOnServices />
-        <ComparisonTable />
-        <CaseStudyGrid />
-        <BrandVault />
-        <CTABanner />
-        <ContactForm />
+        <TheStruggle />
+        <TheJourney />
+        <CreativeServices />
+        <Showcase />
+        <CompetitiveAdvantage />
       </main>
-      <Footer />
+      <FooterCTA />
     </div>
   );
 };

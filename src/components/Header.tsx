@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
-import { Menu, X } from 'lucide-react';
+import { Menu } from 'lucide-react';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import logoBlack from '@/assets/logo-black.png';
 
 const navItems = [
   { label: 'CREATIVE', href: '#creative' },
@@ -39,9 +40,8 @@ export function Header() {
       <div className="container mx-auto px-6 lg:px-12">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
-          <a href="/" className="flex flex-col leading-none">
-            <span className="text-lg font-bold tracking-widest text-foreground">NUSTUDIOS</span>
-            <span className="text-[10px] italic text-primary tracking-wide">Designed for the future of business</span>
+          <a href="/" className="flex items-center">
+            <img src={logoBlack} alt="NuStudios" className="h-10 w-auto" />
           </a>
 
           {/* Desktop Nav */}

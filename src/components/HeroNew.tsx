@@ -3,12 +3,18 @@ import { motion } from 'framer-motion';
 
 export function HeroNew() {
   return (
-    <section id="growth" className="relative min-h-screen flex items-center pt-16 overflow-hidden bg-background">
-      {/* Subtle grid texture */}
-      <div className="absolute inset-0 opacity-[0.03]" style={{
-        backgroundImage: 'radial-gradient(circle at 1px 1px, hsl(var(--foreground)) 1px, transparent 0)',
-        backgroundSize: '32px 32px',
-      }} />
+    <section id="growth" className="relative min-h-screen flex items-center pt-16 overflow-hidden bg-foreground">
+      {/* Background video */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover opacity-30"
+      >
+        <source src="/header.mp4" type="video/mp4" />
+      </video>
+      <div className="absolute inset-0 bg-foreground/50" />
 
       <div className="container mx-auto px-6 lg:px-12 py-20 lg:py-32 relative z-10">
         <div className="max-w-4xl mx-auto text-center space-y-8">
@@ -20,7 +26,7 @@ export function HeroNew() {
             className="text-4xl md:text-5xl lg:text-6xl leading-[1.1]"
           >
             <span className="font-display italic text-primary text-5xl md:text-6xl lg:text-7xl">AI</span>
-            <span className="font-bold"> Like you mean Business.</span>
+            <span className="font-bold text-white"> Like you mean Business.</span>
           </motion.h1>
 
           {/* Sub copy */}
@@ -28,7 +34,7 @@ export function HeroNew() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.15 }}
-            className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed"
+            className="text-lg md:text-xl text-white/70 max-w-2xl mx-auto leading-relaxed"
           >
             Content flows. Engagement scales. Brand grows.<br className="hidden md:block" />
             Fast. Lean. Unstoppable.
@@ -39,7 +45,7 @@ export function HeroNew() {
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="text-sm font-semibold tracking-wider text-foreground/70"
+            className="text-sm font-semibold tracking-wider text-white/60"
           >
             10x the content &nbsp;·&nbsp; 30% of the cost &nbsp;·&nbsp; 100% yours.
           </motion.p>
@@ -51,10 +57,10 @@ export function HeroNew() {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="flex flex-wrap justify-center gap-3"
           >
-            <span className="px-4 py-1.5 rounded-full border border-border text-xs font-medium text-muted-foreground bg-card">
+            <span className="px-4 py-1.5 rounded-full border border-white/20 text-xs font-medium text-white/70 bg-white/5 backdrop-blur-sm">
               AI Proof. Secure your build.
             </span>
-            <span className="px-4 py-1.5 rounded-full border border-border text-xs font-medium text-muted-foreground bg-card">
+            <span className="px-4 py-1.5 rounded-full border border-white/20 text-xs font-medium text-white/70 bg-white/5 backdrop-blur-sm">
               No Coding. Zero technical friction.
             </span>
           </motion.div>
@@ -72,8 +78,8 @@ export function HeroNew() {
               { bold: 'Pro Results.', sub: 'High quality' },
             ].map((item) => (
               <div key={item.bold} className="text-center space-y-1">
-                <p className="text-sm font-bold text-foreground">{item.bold}</p>
-                <p className="text-xs text-muted-foreground">{item.sub}</p>
+                <p className="text-sm font-bold text-white">{item.bold}</p>
+                <p className="text-xs text-white/50">{item.sub}</p>
               </div>
             ))}
           </motion.div>
